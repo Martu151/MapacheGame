@@ -14,9 +14,11 @@ class MAPACHEGAME_API AMyMapache : public ACharacter
 public:
 //Variables
 UPROPERTY(EditAnywhere) int movSpeed;
+bool tieneObjeto;
 //Funciones
 void VerticalAxis(float valor);
 void HorizontalAxis(float valor);
+void AccionAgarra();
 
 public:
 	// Sets default values for this character's properties

@@ -14,11 +14,12 @@ class MAPACHEGAME_API AMyMapache : public ACharacter
 public:
 //Variables
 UPROPERTY(EditAnywhere) int movSpeed;
-bool tieneObjeto;
+UPROPERTY(BlueprintReadWrite) bool tieneObjeto;
+
 //Funciones
 void VerticalAxis(float valor);
 void HorizontalAxis(float valor);
-void AccionAgarra();
+//UFUNCTION(BlueprintCallable) void AccionAgarra(AMyObjetoAgarrable* obj);
 
 public:
 	// Sets default values for this character's properties

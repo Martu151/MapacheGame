@@ -36,7 +36,7 @@ void AMyMapache::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	PlayerInputComponent->BindAxis("MovVertical", this, &AMyMapache::VerticalAxis);
 	PlayerInputComponent->BindAxis("MovHorizontal", this, &AMyMapache::HorizontalAxis);
 	
-	PlayerInputComponent->BindAction("Agarrar", IE_Pressed, this, &AMyCharacterBase::AccionAgarra);
+	//PlayerInputComponent->BindAction("Agarrar", IE_Pressed, this, &AMyMapache::AccionAgarra);
 }
 
 void AMyMapache::VerticalAxis(float valor)
@@ -53,7 +53,7 @@ void AMyMapache::HorizontalAxis(float valor)
 	AddMovementInput(movement);
 }
 
-void AMyMapache::AccionAgarra()
+/*void AMyMapache::AccionAgarra(AMyObjetoAgarrable* obj)
 {
 	if(!tieneObjeto)
 	{
@@ -65,4 +65,4 @@ void AMyMapache::AccionAgarra()
 		//Tira Objeto
 		
 	}
-}
+}*/

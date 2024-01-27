@@ -17,6 +17,8 @@ void AMyMapache::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	movSpeed = 500;
+	
 }
 
 // Called every frame
@@ -31,8 +33,8 @@ void AMyMapache::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	
-	PlayerInputComponent->BindAxis("MovVertical", this, &AMyCharacterBase::VerticalAxis);
-	PlayerInputComponent->BindAxis("MovHorizontal", this, &AMyCharacterBase::HorizontalAxis);
+	PlayerInputComponent->BindAxis("MovVertical", this, &AMyMapache::VerticalAxis);
+	PlayerInputComponent->BindAxis("MovHorizontal", this, &AMyMapache::HorizontalAxis);
 
 }
 
@@ -46,7 +48,7 @@ void AMyMapache::VerticalAxis(float valor)
 void AMyMapache::HorizontalAxis(float valor)
 {
 	float deltaSeconds = GetWorld()->GetDeltaSeconds();
-	FVector movement = GetActorForwardVector() * movSpeed * deltaSeconds * valor;
+	FVector movement = GetActorRightVector() * movSpeed * deltaSeconds * valor;
 	AddMovementInput(movement);
 }
 

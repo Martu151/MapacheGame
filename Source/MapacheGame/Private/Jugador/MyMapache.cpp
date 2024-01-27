@@ -18,6 +18,7 @@ void AMyMapache::BeginPlay()
 	Super::BeginPlay();
 	
 	movSpeed = 500;
+	miraDerecha = true;
 	
 }
 
@@ -46,12 +47,12 @@ void AMyMapache::VerticalAxis(float valor)
 	AddMovementInput(movement);
 }
 
-void AMyMapache::HorizontalAxis(float valor)
+/*void AMyMapache::HorizontalAxis(float valor)
 {
 	float deltaSeconds = GetWorld()->GetDeltaSeconds();
 	FVector movement = GetActorRightVector() * movSpeed * deltaSeconds * valor;
 	AddMovementInput(movement);
-}
+}*/
 
 /*void AMyMapache::AccionAgarra(AMyObjetoAgarrable* obj)
 {

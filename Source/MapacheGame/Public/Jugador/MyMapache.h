@@ -13,8 +13,11 @@ class MAPACHEGAME_API AMyMapache : public ACharacter
 	
 public:
 //Variables
-UPROPERTY(EditAnywhere) int movSpeed;
+UPROPERTY(EditAnywhere, BlueprintReadWrite) int movSpeed;
 UPROPERTY(BlueprintReadWrite) bool tieneObjeto;
+UPROPERTY(BlueprintReadWrite) bool miraDerecha;
+UPROPERTY(BlueprintReadWrite) bool caminaDerecha;
+UPROPERTY(BlueprintReadWrite) bool caminaIzquierda;
 
 //Funciones
 void VerticalAxis(float valor);
